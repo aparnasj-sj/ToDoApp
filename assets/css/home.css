@@ -1,0 +1,125 @@
+body{
+    background-color:rgb(130, 157, 185);
+}
+#header1{
+    color:ivory;
+    text-shadow: lavender;
+    margin-left: 44%;
+}
+#form-container{
+    position: relative;
+    left:30%;
+    width: 40%;;
+}
+.textArea textarea{
+    width:100%;
+    height:10%;
+}
+.select1{
+    position: relative;
+    display:inline-block;
+    width:49%;
+    height:5%;
+}
+#datefield1 {
+    position: relative;
+    display:inline-block;
+    width:49%;
+    height:5%;
+}
+#submitdiv,#deletediv{
+    display:inline-block;
+    width:45%;
+}
+.buttonDiv1{
+    position:relative;
+    left:30%;
+    width:50%;
+
+}
+#datefield1 input{
+    width:100%;
+    height:100%;
+    
+}
+.select1 select{
+    width:100%;
+    height:100%;
+}
+#submitfield1 {
+    width:25%;
+    height:5%;
+    margin-left:57%;
+    border-radius: 5px;
+    background-color: rgb(78, 206, 78);
+}
+#deletefield1{
+    
+    
+    width:25%;
+    height:5%;
+    margin-left:-20%;
+    border-radius: 5px;
+    background-color: rgb(241, 35, 35);
+
+}
+#items-list-container{
+    padding:10px;
+    position:relative;
+    left:28%;
+
+}
+.details{
+    padding: 2px;
+    width:40%;
+    height:10%;
+    background-color: honeydew;
+    margin-bottom: 0.2%;
+}
+#categoryDisplayBox{
+    display:inline-block;
+    background-color: rgb(205, 92, 139);
+    border-radius: 2px;
+    width:13%;
+    height:60%;
+    margin-left: 85%;
+    margin-top: -13%;
+    font-size: larger;
+   
+    color: ivory;
+    padding: 2px;
+}
+#descDiv{
+    font-size: larger;
+   
+    
+}
+
+#timeDiv{
+    margin-top: -2%;
+    font-size: larger;
+  
+}
+ul {
+    list-style-type: none;
+  }
+  @media screen and (max-width:1600px){
+      #categoryDisplayBox{
+          display:none;
+      }
+      #timeDiv{
+        font-size:x-small;
+      }
+      #submitfield1 ,#deletefield1{
+          width:50%;
+          
+          display:block;
+      }
+      #submitfield1{
+          margin-left: 20%;
+      }
+
+  }
+  .fontfamily1{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }

@@ -1,0 +1,71 @@
+<htmL>
+    <head>
+        <title>
+            <%=title%> 
+        </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/home.css">
+    </head>
+    <body>
+        <h1 id="header1" class="fontfamily1">TO DO APP</h1>
+        <form action="/create-item" method="POST">
+            <div id="form-container" class="fontfamily1">
+       
+               <div class="textArea">
+               <textarea class=" fontfamily1" name="description" placeholder="DESCRIPTION"></textarea></br>
+            
+              </div>
+         <div class="select1">
+        <select name="category" id="category" placeholder="CATEGORY" >
+            <option value="personal">PERSONAL</option>
+               <option value="work">WORK</option>
+                <option value="school">SCHOOL</option>
+                  <option value="Other">OTHER</option>
+                </select>
+            </div><!--slect end-->
+            <div id="datefield1">
+            <input type="date" name="dueDate" ></br>
+            </div>
+            </div>
+            <div class="buttonDiv1 ">
+            <div id="submitdiv">
+            <button id="submitfield1" type="submit"> <i class="fas fa-plus-circle"></i>ADD </button>
+            </div><!--inputs-->
+            <div id="deletediv" class="fontfamily1">
+                  <!-- button for delete submit for the checkbox -->
+                  <button formaction="/delete-item" id="deletefield1" type="submit"><i class="fas fa-trash-alt"></i> DELETE   </button>
+                  </div> 
+                  </div>  
+               
+      
+          <div id="items-list-container" class="fontfamily1">
+
+            
+          
+                
+              <ul>
+                <% for (let i of items) { %>
+                  <li class="items">
+                    <div class="details ">
+                      <!-- check box type to delete item by id -->
+                      <input type="checkbox" name="id" value="<%=i._id%>">
+                    <div id="descDiv"><p><%=i.description %></p></div>
+                    <div id="timeDiv">   <p><%=i.dueDate.getDate() %>/<%=i.dueDate.getMonth()%> /<%=i.dueDate.getFullYear()%></p> </div>
+                  <div id="categoryDisplayBox">  <p><%=i.category %></p></div>
+                
+                    </div>
+                    <!-- the delete button is an anchor tag,anchor tag sent get req by default -->
+                    
+                  </li>
+                <%}%>
+              </ul>
+           
+            </div><!--items list container end div -->
+          
+          
+          
+          </form>
+        
+    </body>
+   
+</htmL>
